@@ -1,0 +1,25 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+
+auth_login:
+  path: /api/auth/login
+  controller: App\Controller\AuthController::authenticate
+  methods: [ POST ]
+auth_logout:
+  path: /api/auth/logout
+  controller: App\Controller\AuthController::unAuthenticate
+  methods: [ POST ]
+auth_update:
+  path: /api/auth/update
+  controller: App\Controller\AuthController::updateTokens
+  methods: [ POST ]
+auth_check:
+  path: /api/auth/check
+  controller: App\Controller\AuthController::checkAccessToken
+  methods: [ GET ]
+otp_code:
+  path: /api/otp/code
+  controller: App\Controller\OTPController::getOTPGenerator
+  methods: [ GET ]
